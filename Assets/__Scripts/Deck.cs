@@ -37,7 +37,7 @@ public class Deck : MonoBehaviour {
 
 	// called by Prospector when it is ready
 	public void InitDeck(string deckXMLText) {
-		// from page 576
+		// Creates an anchor for all Card GameObjects in the Hierarchy
 		if( GameObject.Find("_Deck") == null) {
 			GameObject anchorGO = new GameObject("_Deck");
 			deckAnchor = anchorGO.transform;
@@ -153,9 +153,10 @@ public class Deck : MonoBehaviour {
 		// temp variables
 		Sprite tS = null;
 		GameObject tGO = null;
-		SpriteRenderer tSR = null;  // so tempted to make a D&D ref here...
+		SpriteRenderer tSR = null;  
 		
-		for (int i=0; i<cardNames.Count; i++) {
+		for (int i=0; i<cardNames.Count; i++) { 
+        //This is under a private card in page 653 of book with different code
 			GameObject cgo = Instantiate(prefabCard) as GameObject;
 			cgo.transform.parent = deckAnchor;
 			Card card = cgo.GetComponent<Card>();

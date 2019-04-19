@@ -4,12 +4,15 @@ using System.Collections.Generic;
 
 public class Card : MonoBehaviour {
 
-	public string    suit;
-	public int       rank;
-	public Color     color = Color.black;
+    [Header("Set Dynamically")]
+	public string    suit; //Suit of the Card (C,D,H, or S)
+	public int       rank; //Rank of card (1-14)
+	public Color     color = Color.black; //Color to tint pips
 	public string    colS = "Black";  // or "Red"
 	
+    // This List holds all of the Decorator GameObkects
 	public List<GameObject> decoGOs = new List<GameObject>();
+    // This List holds all of the Pip GameObjects
 	public List<GameObject> pipGOs = new List<GameObject>();
 	
 	public GameObject back;  // back of card;
