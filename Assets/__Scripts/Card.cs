@@ -86,6 +86,11 @@ public class Card : MonoBehaviour {
 			back.SetActive(!value);
 		}
 	}
+
+    virtual public void OnMouseUpAsButton()
+    {
+        print(name); //When clicked, this outputs card name
+    }
 	
 	// Update is called once per frame
 	void Update () {
